@@ -40,3 +40,12 @@ kbd {
     list-style-type: circle;
 }
 
+.btn-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-info a {
+    color: white;
+}

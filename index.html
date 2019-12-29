@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./res/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Inria+Serif&display=swap" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="./res/img/favicon.png"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="./res/js/fontawesome.js"></script>
 </head>
 <body>
 
@@ -35,17 +37,17 @@
   <!-- Main Content -->
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-md-6 p-3">
         <div class="h2 pb-2">Inputs</div>
         <input type="number" class="number form-control" autofocus placeholder="Add number here">
-        <div class="btn btn-info btn-md mt-3 addNum d-block">Add Number</div>
-        <div class="btn btn-info btn-md mt-2 orderList d-block">Sort Number</div>
-        <div class="btn btn-info btn-md mt-2 clear d-block">Clear List</div>
+        <div class="btn btn-info btn-md mt-3 addNum input"><i class="fas fa-plus"></i><a href="#">Add number</a></div>
+        <div class="btn btn-info btn-md mt-2 orderList input"><i class="fas fa-sort-amount-down float-left"></i><a href="#">Sort Number</a></div>
+        <div class="btn btn-info btn-md mt-2 clear input"><i class="fas fa-trash-alt"></i><a href="#">Clear List</a></div>
       </div>
-      <div class="col-12 col-md-6">
-        <div class="h2 pb-2 pt-2 pt-md-0">Logs</div>
-        <h2 class="error text-danger"></h2>
-        <h2 class="success text-success"></h2>
+      <div class="col-12 col-md-6 p-3">
+        <div class="h2 pb-2 pt-2 pt-md-0 mb-5">Logs</div>
+        <h3 class="error text-danger text-monospace"></h3>
+        <h3 class="success text-success text-monospace"></h3>
       </div>
     </div>
   </div>
@@ -53,7 +55,7 @@
   <div class="container pushBottom mt-4">
       <div class="pb-2 d-flex align-items-center">
         <h2 class="d-inline">Outputs</h2>
-        <button class="btn btn-md btn-warning ml-4" type="button" data-toggle="collapse" data-target=".multi-collapse">Toggle both</button>
+        <button class="btn btn-md btn-warning ml-4" type="button" data-toggle="collapse" data-target=".multi-collapse"><i class="fas fa-toggle-on mr-2"></i>Toggle both</button>
       </div>
     <p class="mb-2">
       <button class="btn btn-success full-width" type="button" data-toggle="collapse" data-target="#unsortedList">
