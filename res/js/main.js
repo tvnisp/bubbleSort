@@ -71,7 +71,7 @@ function displayList(list ,type) {
     `<ul class="list-style">
     ${outputString}
     </ul>`
-    showSuccess("List sorted")
+    showSuccess("List sorted, see bellow")
   }
 }
 
@@ -92,7 +92,7 @@ function addNumber() {
     showError("Your must type a number")
     return
   } 
-  showSuccess("Number added to the list")
+  showSuccess(`Number ${number} added to the list`)
   DOM.number.value = "";
   unordered_list.push(number);
   displayList(unordered_list, "unsorted")
