@@ -48,7 +48,7 @@ kbd {
   list-style-type: circle;
 }
 
-.btn-info {
+.input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +60,18 @@ kbd {
           align-items: center;
 }
 
-.btn-info a {
+.input a {
   color: white;
+}
+
+@media only screen and (max-width: 576px) {
+  .output {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 /*# sourceMappingURL=style.css.map */

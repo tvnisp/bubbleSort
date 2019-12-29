@@ -40,12 +40,19 @@ kbd {
     list-style-type: circle;
 }
 
-.btn-info {
+.input {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.btn-info a {
+.input a {
     color: white;
+}
+
+@media only screen and (max-width:576px) {
+    .output {
+        display: flex;
+        justify-content: space-between;
+    }
 }
