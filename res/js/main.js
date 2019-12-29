@@ -58,7 +58,7 @@ function displayList(list ,type) {
   if(type === "unsorted") {
     let outputString = generateString(list)
     DOM.displayUnsorted.innerHTML = 
-    `<ul> 
+    `<ul class="list-style"> 
       ${outputString} 
     </ul>`
   } else {
@@ -68,7 +68,7 @@ function displayList(list ,type) {
     }
     let outputString = generateString(list)
     DOM.displaySorted.innerHTML = 
-    `<ul>
+    `<ul class="list-style">
     ${outputString}
     </ul>`
     showSuccess("List sorted")
@@ -130,7 +130,7 @@ function showSuccess(text) {
 // Clear the list
 function clearList() {
   unordered_list = [];
-  DOM.displaySorted.innerHTML = "";
-  DOM.displayUnsorted.innerHTML = "";
+  DOM.displaySorted.innerHTML = "Empty yet, You need to sort the list";
+  DOM.displayUnsorted.innerHTML = "Empty yet, Add some numbers";
   showSuccess("List cleared");
 }

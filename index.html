@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./res/css/bootstrap.min.css">
   <link rel="stylesheet" href="./res/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Inria+Serif&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./res/img/favicon.png"/>
 </head>
 <body>
 
@@ -50,15 +51,18 @@
   </div>
 
   <div class="container pushBottom mt-4">
-      <div class="h2 pb-2">Outputs</div>
-    <p>
+      <div class="pb-2 d-flex align-items-center">
+        <h2 class="d-inline">Outputs</h2>
+        <button class="btn btn-md btn-warning ml-4" type="button" data-toggle="collapse" data-target=".multi-collapse">Toggle both</button>
+      </div>
+    <p class="mb-2">
       <button class="btn btn-success full-width" type="button" data-toggle="collapse" data-target="#unsortedList">
         Toggle Unsorted List
       </button>
     </p>
-    <div class="collapse" id="unsortedList">
+    <div class="collapse multi-collapse" id="unsortedList">
       <div class="card card-body mb-2 display_unsorted">
-        Here is the unsorted List
+        Empty yet, Add some numbers
       </div>
     </div>
     <p>
@@ -66,9 +70,9 @@
         Toggle Sorted List
       </button>
     </p>
-    <div class="collapse" id="sortedList">
+    <div class="collapse multi-collapse" id="sortedList">
       <div class="card card-body display_sorted">
-        Here is the Sorted List
+        Empty yet, You need to sort the list
       </div>
     </div>
   </div>
