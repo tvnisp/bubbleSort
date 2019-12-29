@@ -1,0 +1,38 @@
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Inria Serif', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: black;
+    font-weight: 500;
+}
+  
+.instr p {
+    margin-bottom: 2px;
+}
+
+.jumbotron {
+    background: #434267;
+    background: linear-gradient(132deg, #434267 0%, #20639b 0%, #4ab3a8 100%);
+    color: black;
+    text-shadow: 1px 1px 5px #888888;
+    border-radius: 0;
+    box-shadow: 1px 1px 5px black;
+}
+
+kbd {
+    text-shadow: none;
+}
+
+.pushBottom {
+    flex-grow: 1;
+}
+
+.full-width {
+    width: 100%;
+}
+
