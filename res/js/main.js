@@ -1,5 +1,5 @@
 let unordered_list = [];
-document.querySelector('#descending').checked = true
+DOM.descending.checked = true
 
 // Bubblesort Algorithm
 function orderArray(list, orderType) {
@@ -45,7 +45,8 @@ const DOM = {
   success: document.querySelector(".success"),                  //Success output
   displaySorted: document.querySelector(".display_sorted"),     //Sorted list
   displayUnsorted: document.querySelector(".display_unsorted"), //Unsorted list
-  clear: document.querySelector(".clear")                       //Clear list
+  clear: document.querySelector(".clear"),                      //Clear list
+  descending: document.querySelector('#descending'),
 }
 
 // Event Listeners 
@@ -142,5 +143,6 @@ function clearList() {
   unordered_list = [];
   DOM.displaySorted.innerHTML = "Empty yet, You need to sort the list";
   DOM.displayUnsorted.innerHTML = "Empty yet, Add some numbers";
+  DOM.descending.checked = true;
   showSuccess("List cleared");
 }
