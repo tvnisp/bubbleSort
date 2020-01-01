@@ -74,4 +74,30 @@ kbd {
             justify-content: space-between;
   }
 }
+
+.display_unsorted, .display_sorted {
+  max-height: 400px;
+}
+
+ul {
+  max-height: 100%;
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: scroll;
+  margin: 0;
+  padding-left: 20px;
+}
+
+ul li {
+  min-width: 100px;
+  height: 30px;
+}
 /*# sourceMappingURL=style.css.map */
