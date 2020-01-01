@@ -1,20 +1,31 @@
 let unordered_list = [];
+document.querySelector('#descending').checked = true
 
 // Bubblesort Algorithm
-function orderArray(list) {
+function orderArray(list, orderType) {
   let counter = 0;
   let flag = true;
   let checked_position = 0;
   while (flag == true) {
     flag = false
     for(let i = 0; i <= (list.length - checked_position); i++) {
-      if (list[i + 1] > list[i]) {
-        let temp = list[i + 1];
-        list[i + 1] = list[i];
-        list[i] = temp;
-        flag = true;
-        counter++
-      };
+      if (orderType === "descending") {
+        if (list[i + 1] > list[i]) {
+          let temp = list[i + 1];
+          list[i + 1] = list[i];
+          list[i] = temp;
+          flag = true;
+          counter++
+        };
+      } else if( orderType === "ascending") {
+        if (list[i + 1] < list[i]) {
+          let temp = list[i + 1];
+          list[i + 1] = list[i];
+          list[i] = temp;
+          flag = true;
+          counter++
+        };
+      }
     };
     checked_position ++
     };
@@ -54,7 +65,7 @@ document.addEventListener("keydown", event => {
 });
 
 // Display lists
-function displayList(list ,type) {
+function displayList(list ,type, orderType) {
   if(type === "unsorted") {
     let outputString = generateString(list)
     DOM.displayUnsorted.innerHTML = 
@@ -71,15 +82,15 @@ function displayList(list ,type) {
     `<ul class="list-style">
     ${outputString}
     </ul>`
-    showSuccess("List sorted, see bellow")
+    showSuccess(`List sorted in ${orderType} order, see bellow`)
   }
 }
 
 // Order the list 
 function orderList() {
-  let data = orderArray(unordered_list);
-  displayList(data.list, "sorted")
-  unordered_list = [];
+  var checkedRad = document.querySelector('input[name=orderType]:checked').id;
+  let data = orderArray(unordered_list, checkedRad);
+  displayList(data.list, "sorted", checkedRad)
   setTimeout(() => {
     DOM.number.value = "";
   }, 100);
@@ -87,6 +98,7 @@ function orderList() {
 
 // Add Number
 function addNumber() {
+  DOM.displaySorted.innerHTML = "Empty yet, You need to sort the list";
   let number = parseFloat(DOM.number.value);
   if (!number) {
     showError("Your must type a number")
@@ -111,7 +123,6 @@ function generateString(list){
 function showError(text) {
   DOM.error.textContent = text;
   DOM.error.style.display = "block";
-  DOM.success.display = "none";
   setTimeout(() => {
     DOM.error.style.display = "none";
   }, 1000)
@@ -119,9 +130,8 @@ function showError(text) {
 
 // Show Success
 function showSuccess(text) {
-  DOM.error.display = "none";
-  DOM.success.style.display = "block";
   DOM.success.textContent = text;
+  DOM.success.style.display = "block";
   setTimeout(() => {
     DOM.success.style.display = "none";
   }, 1000)
