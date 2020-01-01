@@ -1,5 +1,9 @@
 let unordered_list = [];
-DOM.descending.checked = true
+setTimeout(()=> {
+  DOM.descending.checked = true;
+
+},200)
+
 
 // Bubblesort Algorithm
 function orderArray(list, orderType) {
@@ -145,4 +149,7 @@ function clearList() {
   DOM.displayUnsorted.innerHTML = "Empty yet, Add some numbers";
   DOM.descending.checked = true;
   showSuccess("List cleared");
+  setTimeout(() => {
+    DOM.number.value = "";
+  }, 100);  
 }
