@@ -3,14 +3,14 @@ html {
 }
 
 body {
-  font-family: 'Inria Serif', serif;
+  font-family: "Inria Serif", serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   min-height: 100vh;
   color: black;
   font-weight: 500;
@@ -27,7 +27,7 @@ body {
   text-shadow: 1px 1px 5px #888888;
   border-radius: 0;
   -webkit-box-shadow: 1px 1px 5px black;
-          box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px black;
 }
 
 kbd {
@@ -36,8 +36,8 @@ kbd {
 
 .pushBottom {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
 
 .full-width {
@@ -53,11 +53,11 @@ kbd {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .input a {
@@ -70,12 +70,13 @@ kbd {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
   }
 }
 
-.display_unsorted, .display_sorted {
+.display_unsorted,
+.display_sorted {
   max-height: 400px;
 }
 
@@ -87,10 +88,10 @@ ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   overflow: scroll;
   margin: 0;
   padding-left: 20px;
